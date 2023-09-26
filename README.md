@@ -32,6 +32,10 @@
     https://pypi.org/project/Pillow/
     pip install Pillow
 
+##### 5. Instalar Driver para conectar Gestor de BD MySQL con Django
+
+    pip install mysqlclient
+
 ###### 6. Crear el proyecto con Djando
 
     `django-admin startproject project_core .`
@@ -42,7 +46,7 @@
 
 ###### 7. Crear mi primera aplicación en Django
 
-    python manage.py startapp subir_archivo_e_imagen
+    python manage.py startapp tiendaOnline
 
 ###### 8. Crear el archivo requirements.txt para tener todos mis paquetes a la mano
 
@@ -54,7 +58,7 @@
     archivo settings.py
     INSTALLED_APPS = [
     ----,
-    'subir_archivo_e_imagen',
+    'tiendaOnline',
     ]
 
 #### - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -106,9 +110,11 @@
     		model = SubirDumentoImagen
     		fields = ('documento', 'imagen')
 
-#### 4. Corriendo las migraciones
+#### 5. Crear y Correr las migraciones
 
-    python3 manager.py migrate #Correr migraciones
+    python manage.py makemigrations  #Crear Migracion
+
+    python manage.py migrate #Correr migraciones #Correr migracion
 
 #### 6. Define el views.py
 
