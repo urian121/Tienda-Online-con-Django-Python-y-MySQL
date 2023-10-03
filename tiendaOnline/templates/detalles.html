@@ -1,0 +1,26 @@
+{#% extends 'bases.html' %#}
+<!---->
+{#% block title %#}Detalles del Producto{#% endblock %#}
+<!---->
+{#% load static %#}
+<!---->
+{#% block content %#}
+<div class="col-md-5 mb-2">
+  <div class="card">
+    {% load static %}
+    <img
+      src="{% static 'imgs/libro-python.jpg' %}"
+      class="card-img-top"
+      alt="libro" />
+
+    <div class="card-body">
+      <h5 class="card-title">Titulo: {{ producto.nombre }}</h5>
+      <p class="card-text">Autor: {{ producto.descripcion }}</p>
+      <p class="card-text">Precio: {{ producto.precio }}</p>
+      <p class="card-text">{{ producto.created_at|date:"M d, Y" }}</p>
+
+      <a href="{% url 'inicio' %}" class="btn btn-primary">volver</a>
+    </div>
+  </div>
+</div>
+{#% endblock %#}

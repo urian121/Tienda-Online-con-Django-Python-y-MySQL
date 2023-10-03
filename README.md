@@ -149,6 +149,9 @@
     python3 manage.py runserver # Corriendo el proyecto
     python3 manage.py runserver 8500 #Corriendo el proyecto en un puerto diferente
 
+13. Creamos un usuario para entrar al CPanel de Django y poder ver mis modelos (tablas)
+    python manage.py createsuperuser
+
 ## Resultado final
 
 ![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/Guardar-Archivo-e-Imagen-en-Django-Python.png)
